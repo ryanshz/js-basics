@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fp3</title>
+</head>
+<body>
+    <script>
+        function add7(x){
+            return x+7;
+        }
+        function multiply(x,y){
+            return x*y;
+        }
+        function capitalize(string){
+            let first = string.slice(0,1);
+            let second = string.slice(1,string.length);
+            let firstUpper = first.toUpperCase();
+            let secondLower = second.toLowerCase();
+            return firstUpper.concat("",secondLower);
+        }
+        function lastLetter(string){
+            return string.slice(string.length-1,string.length);
+        }
+        console.log(add7(8));
+        console.log(multiply(3,7));
+        console.log(capitalize("doppelGAnger"));
+        console.log(lastLetter("anchovies"));
+    </script>
+</body>
+</html>
