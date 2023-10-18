@@ -1,5 +1,11 @@
 function getComputerChoice(){
-    let randomNumber = Math.floor(Math.random()*4);
+    let randomNumber = Math.round(Math.random()*4);
+    if(randomNumber == 4){
+        randomNumber = 3;
+    }
+    if(randomNumber == 0){
+        randomNumber = 1;
+    }
     switch(randomNumber){
         case 1:
             return 'rock';
@@ -48,6 +54,8 @@ function game(){
     for(let i=0;i<5;i++){
         let userInput = prompt("Input rock, paper, or scissors!");
         let computerInput = getComputerChoice();
+        console.log('user input: '+userInput);
+        console.log('computer input: '+computerInput);
         console.log(playRound(userInput,computerInput));
     }
 }
